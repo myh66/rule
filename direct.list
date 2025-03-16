@@ -1,5 +1,8 @@
-# 本地/局域网地址
+# ========================
+# 直连规则（DIRECT）
+# ========================
 
+# 自定义 IP 直连列表
 IP-CIDR,16.162.109.238/32,DIRECT,no-resolve
 IP-CIDR,13.230.226.74/32,DIRECT,no-resolve
 IP-CIDR,52.91.209.111/32,DIRECT,no-resolve
@@ -12,3 +15,32 @@ IP-CIDR,143.244.185.134/32,DIRECT,no-resolve
 IP-CIDR,143.110.186.189/32,DIRECT,no-resolve
 IP-CIDR,68.183.2.71/32,DIRECT,no-resolve
 IP-CIDR,64.225.97.114/32,DIRECT,no-resolve
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,deepi.com,DIRECT
+
+# 正则表达式匹配
+DOMAIN-REGEX,^.*api-free\.deepi\.com$,DIRECT
+
+
+# ========================
+# 其他匹配规则示例（按需启用）
+# ========================
+
+# 域名完全匹配
+# DOMAIN,example.com,DIRECT
+
+# 域名关键词匹配
+# DOMAIN-KEYWORD,google,DIRECT
+
+# IPv6 地址匹配
+# IP-CIDR6,2001:db8::/32,DIRECT,no-resolve
+
+# 地理位置匹配（国家代码）
+# GEOIP,CN,DIRECT
+
+# 用户代理匹配
+# USER-AGENT,Telegram*,DIRECT
+
+# 端口匹配（需工具支持）
+# PORT,8080,DIRECT
