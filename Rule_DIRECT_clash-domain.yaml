@@ -1,0 +1,4 @@
+payload:
+#  - DOMAIN-SUFFIX,example.com,DIRECT
+#  - DOMAIN-SUFFIX,example.net,DIRECT
+  # 这里填入直连的域名
