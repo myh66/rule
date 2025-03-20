@@ -1,46 +1,32 @@
-# ==============================
-# 📌 Direct List (直连列表)
-# 作用：指定某些 IP 或域名绕过代理，直接连接
-# 适用于 Clash / OpenClash
-# ==============================
+### **Clash 规则简要说明**  
 
-# 🚀【1. 直连指定 IP】(适用于一些国内服务或 CDN)
-# - `/32` 代表单个 IP，不是整个网段
-# - `no-resolve` 表示不进行 DNS 解析
-- IP-CIDR,16.162.109.238/32,DIRECT,no-resolve
-- IP-CIDR,13.230.226.74/32,DIRECT,no-resolve
-- IP-CIDR,52.91.209.111/32,DIRECT,no-resolve
-- IP-CIDR,54.254.142.26/32,DIRECT,no-resolve
-- IP-CIDR,13.53.127.218/32,DIRECT,no-resolve
-- IP-CIDR,167.99.114.124/32,DIRECT,no-resolve
-- IP-CIDR,209.38.31.42/32,DIRECT,no-resolve
+#### **📌 规则动作**
+- `DIRECT` —— 直接连接（不走代理）  
+- `PROXY` —— 通过代理服务器连接  
+- `REJECT` —— 拦截请求（屏蔽网站或 IP）  
+- `MATCH` —— 匹配所有流量（通常用于最后一条规则）  
 
-# 🚀【2. 直连特定域名】(适用于国内网站或敏感流量)
-# - `DOMAIN-SUFFIX` 适用于该域名及其所有子域名
-- DOMAIN-SUFFIX,deepi.com,DIRECT
-- DOMAIN-SUFFIX,mypikpak.com,DIRECT
-- DOMAIN-SUFFIX,mypikpak.net,DIRECT
-- DOMAIN-SUFFIX,baidu.com,DIRECT
-- DOMAIN-SUFFIX,qq.com,DIRECT
-- DOMAIN-SUFFIX,alipay.com,DIRECT
+#### **📌 规则类型**
+- `IP-CIDR` —— 按 IP 段匹配，例如 `IP-CIDR,192.168.1.0/24,DIRECT`  
+- `DOMAIN-SUFFIX` —— 按域名后缀匹配，例如 `DOMAIN-SUFFIX,google.com,PROXY`  
+- `DOMAIN` —— 精确匹配域名，例如 `DOMAIN,example.com,DIRECT`  
+- `DOMAIN-KEYWORD` —— 只要域名包含关键字就匹配，例如 `DOMAIN-KEYWORD,jav,PROXY`  
+- `GEOIP` —— 按国家/地区匹配 IP，例如 `GEOIP,CN,DIRECT`  
+- `RULE-SET` —— 引用外部规则文件，例如 `RULE-SET,direct,DIRECT`  
+- `MATCH` —— 匹配所有流量，通常作为最后一条，例如 `MATCH,PROXY`  
 
-# 🚀【3. 直连特定主机名】(适用于单个网站，不包括子域名)
-# - `DOMAIN` 只匹配这个具体的域名
-- DOMAIN,someone.example.com,DIRECT
-
-# 🚀【4. 直连特殊 TLD】(适用于国内域名)
-# - `DOMAIN-SUFFIX` 适用于整个顶级域名 (TLD)
-- DOMAIN-SUFFIX,cn,DIRECT
-- DOMAIN-SUFFIX,gov,DIRECT
-
-# 🚀【5. 直连私有地址 & 本地网络】(防止走代理)
-# - 适用于本地局域网、Docker 网络等
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- IP-CIDR,127.0.0.1/32,DIRECT
-- IP-CIDR,100.64.0.0/10,DIRECT
-
-# 🚀【6. 直连中国 IP 段】(可选，适用于绕过国内 CDN)
-# - 这里用的是常见中国 IP 段
+✅ **常见规则**：
+```yaml
+- DOMAIN-SUFFIX,example.com,PROXY
+- DOMAIN-KEYWORD,jav,PROXY
+- IP-CIDR,8.8.8.8/32,DIRECT
 - GEOIP,CN,DIRECT
+- MATCH,PROXY
+```
+
+💡 **简单理解**：
+- `DOMAIN-SUFFIX,google.com,PROXY` → 所有 `google.com` 结尾的域名走代理  
+- `DOMAIN-KEYWORD,jav,PROXY` → 只要域名包含 `jav` 这个单词就走代理  
+- `IP-CIDR,8.8.8.8/32,DIRECT` → 指定 IP 地址不走代理  
+- `GEOIP,CN,DIRECT` → 中国 IP 直连  
+- `MATCH,PROXY` → 其他所有流量都走代理  
