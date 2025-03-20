@@ -1,19 +1,16 @@
 payload:
   # IP-CIDR 规则示例
-  # - IP-CIDR,3.3.3.3/32,DIRECT
-  # - IP-CIDR,4.4.4.4/32,DIRECT
-
-  - IP-CIDR,16.162.109.238/32,DIRECT,no-resolve
-  - IP-CIDR,13.230.226.74/32,DIRECT,no-resolve
-  - IP-CIDR,52.91.209.111/32,DIRECT,no-resolve
-  - IP-CIDR,54.254.142.26/32,DIRECT,no-resolve
-  - IP-CIDR,13.53.127.218/32,DIRECT,no-resolve
-  - IP-CIDR,167.99.114.124/32,DIRECT,no-resolve
-  - IP-CIDR,209.38.31.42/32,DIRECT,no-resolve
-  - IP-CIDR,64.23.226.12/32,DIRECT,no-resolve
-  - IP-CIDR,143.244.185.134/32,DIRECT,no-resolve
-  - IP-CIDR,143.110.186.189/32,DIRECT,no-resolve
-  - IP-CIDR,68.183.2.71/32,DIRECT,no-resolve
-  - IP-CIDR,64.225.97.114/32,DIRECT,no-resolve
+  - '16.162.109.238/32'
+  - '13.230.226.74/32'
+  - '52.91.209.111/32'
+  - '54.254.142.26/32'
+  - '13.53.127.218/32'
+  - '167.99.114.124/32'
+  - '209.38.31.42/32'
+  - '64.23.226.12/32'
+  - '143.244.185.134/32'
+  - '143.110.186.189/32'
+  - '68.183.2.71/32'
+  - '64.225.97.114/32'
 
   # 这里填入直连的 IP 段
