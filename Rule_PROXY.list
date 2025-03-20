@@ -23,7 +23,7 @@
 - `DOMAIN` —— 精确匹配域名，例如 `DOMAIN,example.com,DIRECT`  
   # 例如 `DOMAIN,example.com,DIRECT` → 只有 example.com 这个域名直连，子域名不受影响  
 
-  - DOMAIN,access.mypikpak.com,PROXY
+#- DOMAIN,access.mypikpak.com,PROXY
 
 #### **📌 规则类型**
 - `IP-CIDR` —— 按 IP 段匹配，例如 `IP-CIDR,192.168.1.0/24,PROXY`  
