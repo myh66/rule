@@ -1,3 +1,15 @@
+  - DOMAIN,access.mypikpak.com,REJECT
+
+  - DOMAIN,access.mypikpak.net,REJECT
+
+  - DOMAIN,access.pikpak.me,REJECT
+
+  - DOMAIN,access.pikpakdrive.com,REJECT
+
+  - DOMAIN-KEYWORD,dl-a10b-,DIRECT
+
+  - GEOSITE,pikpak,DIRECT
+
 #### **📌 规则动作**
 - `DIRECT` —— 直接连接（不走代理）  
 - `PROXY` —— 通过代理服务器连接  
