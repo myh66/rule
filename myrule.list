@@ -32,7 +32,7 @@
 - `DOMAIN-KEYWORD` —— 只要域名包含关键字就匹配，例如 `DOMAIN-KEYWORD,jav,PROXY`  
   # 例如 `DOMAIN-KEYWORD,jav,PROXY` → 只要域名包含 jav 这个单词就走代理  
 
-  - DOMAIN-KEYWORD,jav,PROXY
+  - DOMAIN-KEYWORD,pikpak,PROXY
 
 #### **📌 规则类型**
 - `IP-CIDR` —— 按 IP 段匹配，例如 `IP-CIDR,192.168.1.0/24,DIRECT`  
