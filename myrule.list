@@ -33,3 +33,38 @@
   # 例如 `DOMAIN-KEYWORD,jav,PROXY` → 只要域名包含 jav 这个单词就走代理  
 
   - DOMAIN-KEYWORD,jav,PROXY
+
+#### **📌 规则类型**
+- `IP-CIDR` —— 按 IP 段匹配，例如 `IP-CIDR,192.168.1.0/24,DIRECT`  
+  # 例如 `IP-CIDR,8.8.8.8/32,DIRECT` → 指定 IP 地址不走代理  
+
+- `DOMAIN-SUFFIX` —— 按域名后缀匹配，例如 `DOMAIN-SUFFIX,google.com,PROXY`  
+  # 例如 `DOMAIN-SUFFIX,google.com,PROXY` → 所有 google.com 结尾的域名走代理  
+
+- `DOMAIN` —— 精确匹配域名，例如 `DOMAIN,example.com,DIRECT`  
+  # 例如 `DOMAIN,example.com,DIRECT` → 只有 example.com 这个域名直连，子域名不受影响  
+
+- `DOMAIN-KEYWORD` —— 只要域名包含关键字就匹配，例如 `DOMAIN-KEYWORD,jav,PROXY`  
+  # 例如 `DOMAIN-KEYWORD,jav,PROXY` → 只要域名包含 jav 这个单词就走代理  
+
+- `GEOIP` —— 按国家/地区匹配 IP，例如 `GEOIP,CN,DIRECT`  
+  # 例如 `GEOIP,CN,DIRECT` → 中国 IP 直连  
+
+- `RULE-SET` —— 引用外部规则文件，例如 `RULE-SET,direct,DIRECT`  
+  # 例如 `RULE-SET,direct,DIRECT` → 让 direct 规则文件中的所有条目直连  
+
+- `MATCH` —— 匹配所有流量，通常作为最后一条，例如 `MATCH,PROXY`  
+  # 例如 `MATCH,PROXY` → 其他所有流量都走代理  
+
+- `SRC-IP-CIDR` —— 按源 IP 匹配，例如 `SRC-IP-CIDR,192.168.1.100/32,DIRECT`  
+  # 例如 `SRC-IP-CIDR,192.168.1.100/32,DIRECT` → 指定源 IP 地址 192.168.1.100 直连  
+
+- `DST-PORT` —— 按目标端口匹配，例如 `DST-PORT,443,PROXY`  
+  # 例如 `DST-PORT,443,PROXY` → 让所有 443 端口（HTTPS）流量走代理  
+
+- `PROCESS-NAME` —— 按进程名称匹配，例如 `PROCESS-NAME,chrome.exe,PROXY`  
+  # 例如 `PROCESS-NAME,chrome.exe,PROXY` → 让 Chrome 浏览器的流量走代理  
+
+- `IN-TYPE` —— 按流量来源匹配，例如 `IN-TYPE,Wi-Fi,DIRECT`  
+  # 例如 `IN-TYPE,Wi-Fi,DIRECT` → 让 Wi-Fi 网络的流量直连  
+
