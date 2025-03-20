@@ -1,0 +1,4 @@
+payload:
+#  - DOMAIN,example.org,PROXY
+#  - DOMAIN,example.tv,PROXY
+  # 这里填入需要代理的精确匹配域名
