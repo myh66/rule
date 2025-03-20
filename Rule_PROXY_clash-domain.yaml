@@ -1,0 +1,4 @@
+payload:
+#  - DOMAIN-SUFFIX,example.org,PROXY
+#  - DOMAIN-SUFFIX,example.tv,PROXY
+  # 这里填入需要代理的域名
