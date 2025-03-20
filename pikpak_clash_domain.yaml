@@ -4,4 +4,3 @@ payload:
   - DOMAIN,access.pikpak.me,REJECT
   - DOMAIN,access.pikpakdrive.com,REJECT
   - DOMAIN-KEYWORD,dl-a10b-,DIRECT
-  - GEOSITE,pikpak,DIRECT
