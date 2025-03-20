@@ -1,7 +1,7 @@
 payload:
   # IP-CIDR 规则示例
-  #  - IP-CIDR,3.3.3.3/32,DIRECT
-  #  - IP-CIDR,4.4.4.4/32,DIRECT
+  # - IP-CIDR,3.3.3.3/32,DIRECT
+  # - IP-CIDR,4.4.4.4/32,DIRECT
 
   - IP-CIDR,16.162.109.238/32,DIRECT,no-resolve
   - IP-CIDR,13.230.226.74/32,DIRECT,no-resolve
