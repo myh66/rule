@@ -1,0 +1,4 @@
+payload:
+#  - DOMAIN,example.com,DIRECT
+#  - DOMAIN,example.net,DIRECT
+  # 这里填入直连的精确匹配域名
