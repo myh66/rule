@@ -1,4 +1,9 @@
 payload:
+  - DOMAIN,same.new
+  - DOMAIN,pika.art
+  - DOMAIN,nodeseek.com
+
+
 #  - DOMAIN,example.com,DIRECT
 #  - DOMAIN,example.net,DIRECT
   # 这里填入直连的精确匹配域名
