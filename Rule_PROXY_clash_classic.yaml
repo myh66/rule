@@ -3,7 +3,8 @@ payload:
   - DOMAIN,pika.art
   - DOMAIN,nodeseek.com
   - DOMAIN,sub.v1.mk
-
+  - DOMAIN,x.com
+  - DOMAIN-KEYWORD,twitter
 
 #  - DOMAIN,example.org,PROXY
 #  - DOMAIN,example.tv,PROXY
