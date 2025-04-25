@@ -44,6 +44,10 @@ payload:
   - '+.amzndns.org'
   - 'DOMAIN-REGEX,.+\.amzndns\.(co\.uk|com|net|org)$'
   - 'DOMAIN-REGEX,.+\.awsdns-[0-9][0-9]\.(co\.uk|com|net|org)$'
+  - 'aws.amazon.com'
+  - 'console.aws.amazon.com'
+  - 'signin.aws.amazon.com'
+  - 'DOMAIN-REGEX,.+\.aws\.amazon\.com$'
 
 
 
