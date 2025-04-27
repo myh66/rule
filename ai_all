@@ -1,1 +1,4 @@
-1
+payload:
+  - "+.same.new"
+  - "+.same.dev"
+  - "+.grok.com"
